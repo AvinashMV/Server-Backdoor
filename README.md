@@ -1,11 +1,10 @@
 # Server-Backdoor
-Project of Software Security. 
-A backdoor server that allows the hacker access to the system at a later date, without exploiting the same vulnerabilities
+Software Security Project (C/C++)
 
-*HTTP 1.1 server, based on RFC 2616 from scratch, without using any libraries except for the C standard library.
+This is server backdoor program, which sits on victims machine. It allows hacker to run a shell command as a HTTP request from the browser. It sends HTTP/1.1 as a response through firewall.
 
-*The backdoor functionality is that when server receives a GET request for a URL in the form of /exec/<command>, then it 
-server should take <command> and execute it using the system libc function and the HTTP response will be the stdout of the executed command.
+*The backdoor functionality is that when server receives a GET request for a URL in the form of /exec/<command>, then
+server takes <command> and execute it using the system libc function and the HTTP response will be the stdout of the executed command.
 
 To run server 
 ./normal_web_server <portno>
